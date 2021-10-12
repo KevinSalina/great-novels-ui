@@ -6,10 +6,12 @@ const GenresModel = require('./genres')
 const NovelsModel = require('./novels')
 const NovelsGenresModel = require('./novelsGenres')
 
-const environment = process.env.NODE_ENV ? process.env.NODE_ENV : 'development'
+const environment = 'development'
 const {
   username, password, database, host, dialect,
 } = allConfigs[environment]
+
+
 
 const connection = new Sequelize(database, username, password, { host, dialect })
 
